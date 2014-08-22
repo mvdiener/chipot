@@ -2,20 +2,19 @@ var lastInfowindow;
 var photoURL;
 $(function() {
 
-  $('#start-draw').on('click', function(e) {        
-    var size = "size=" + "640x480&";        
-    if (map.streetView.pano === null) {            
-      alert('Please switch to Street View first!');        
-    } else {        
-      var pano = "pano=" + map.streetView.location.pano + "&";        
-      var heading = "heading=" + map.streetView.pov.heading + "&";        
-      var pitch = "pitch=" + map.streetView.pov.pitch + "&";         // var zoom = "zoom=" + map.streetView.location.pov.zoom + "&";
-
-      var url = "http://maps.googleapis.com/maps/api/streetview?" + size + pano + heading + pitch;        
-      $('#street-view-image').attr("src", url);        
-      $('.metro').hide();        
-      $('.draw').show();        
-    }    
+  $('#start-draw').on('click', function(e) {
+    var size = "size=" + "640x480&";
+    if (map.streetView.pano == null) {
+      alert('Please switch to Street View first!');
+    } else {
+      var pano = "pano=" + map.streetView.location.pano + "&";
+      var heading = "heading=" + map.streetView.pov.heading + "&";
+      var pitch = "pitch=" + map.streetView.pov.pitch;
+      var url = "http://maps.googleapis.com/maps/api/streetview?" + size + pano + heading + pitch;
+      $('#street-view-image').attr("src", url);
+      $('.metro').hide();
+      $('.draw').show();
+    }
   });
 
   var sketchPad = createSketchpad();
@@ -345,8 +344,8 @@ $(function() {
         scope.options.axes.y.max = Math.max(yMax, y2Max);
         scope.options.axes.y2.max = Math.max(yMax, y2Max);
         scope.data = chartData;
-        $('#avg-report').html("" + unfilled_markers.length / dates.length);
-        $('#avg-patch').html("" + filled_markers.length / dates.length);
+        $('#avg-report').html("" + (unfilled_markers.length / dates.length).toFixed(0));
+        $('#avg-patch').html("" + (filled_markers.length / dates.length).toFixed(0));
       });
     }
   };
