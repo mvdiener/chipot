@@ -35,6 +35,7 @@ gem 'rmagick', '~> 2.13.3'
 
 #Memcache Dalli
 gem 'dalli'
+gem 'memcachier'
 
 #MiniProfiler that displays speed on the page
 
