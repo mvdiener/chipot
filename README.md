@@ -1,25 +1,33 @@
-[ ![Codeship Status for quytx1102/chipot](https://www.codeship.io/projects/6a2d5b30-0848-0132-1898-6aa16297dee2/status)](https://www.codeship.io/projects/31344)
-
 Chicaghole
 ===============
 
 Project Overview
 ---------------
-Chicaghole is an app which provides users with a platform to report the presence of potholes within the chicago area.
+Chicaghole is an app which provides users with a quick and easy way to report the presence of potholes within the Chicago area, as well as view information about existing reports.
 
 
-Functionality/Features
+Features
 ---------------
-- Users are able to navigate through a map to report the location of pothole.
-- Users are able to register with the site.
+- Users can submit a pothole report anywhere in the Chicago area
+- Users can upload an image of the pothole, or draw on Google street view
+- Users can view information about exsiting pothole reports between a date range
+
+
+How To Submit a Pothole Report
+---------------
+1. Use the browser's geolocation tool or search for your address in the search bar
+2. Once zoomed in, click anywhere on the map to bring up the report form
+3. Fill out fields and click submit!
 
 
 Technologies
 ---------------
 - Rails
-- Google Maps Api
+- Google Maps API
+- Chicago Open311 API
 - AngularJS
 - jQuery
+- D3
 - RSpec
 
 
