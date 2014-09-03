@@ -1,4 +1,4 @@
-require 'rmagick'
+require 'RMagick'
 require 'base64'
 require 'securerandom'
 module ApplicationHelper
