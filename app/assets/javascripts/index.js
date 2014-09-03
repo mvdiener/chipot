@@ -318,7 +318,7 @@ $(function() {
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
             map: map,
-            icon: '/assets/red_MarkerA.png',
+            icon: '/assets/red_Marker.png',
             optimized: true
           });
           makeInfoWindowEvent(map, infowindow, "Reported on: " + data[i].creation_date + "<br>" + "Street Address: " + data[i].street_address, marker);
@@ -327,7 +327,7 @@ $(function() {
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
             map: map,
-            icon: '/assets/green_MarkerA.png',
+            icon: '/assets/green_Marker.png',
             optimized: true
           });
           makeInfoWindowEvent(map, infowindow, "Reported on: " + data[i].creation_date + "<br>" + "Patched on: " + data[i].completion_date + "<br>" + "Street Address: " + data[i].street_address, marker);

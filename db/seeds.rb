@@ -3,7 +3,7 @@
 
 class Seeder
   def self.seed
-    (DateTime.new(2014,8,1).to_date..(DateTime.yesterday)).each do |d|
+    (DateTime.new(2014,7,1).to_date..(DateTime.yesterday)).each do |d|
       puts "THIS IS IN THE CREATING RECORD IN ACTIVERECORD"
       puts d
       response = get_data(d.midnight)
